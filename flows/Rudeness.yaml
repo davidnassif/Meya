@@ -1,0 +1,8 @@
+name: Rudeness
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: I'm so sorry to hear this, I will be giving high priority to this matter, I will raise it immediately to our management and you will definitely get a call back from one of our specialists. 
+        delay:
+            relative: 5

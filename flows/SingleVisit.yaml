@@ -1,0 +1,36 @@
+name: SingleVisit
+states:
+    next:
+        component: meya.text_buttons
+        properties:
+            text: Please choose the nationality you want 
+            output: button_click
+            buttons:
+                - text: Indonesian
+                  action: next
+                  data:
+                    foo: bar
+                - text: filipino
+                  action: next
+        delay:
+            relative: 5
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: "Do you prefer the cleaning session to be:"
+            output: button_click
+            buttons:
+                - text: Morning
+                  action: next
+                  data:
+                    foo: bar
+                - text: Afternoon
+                  action: next
+        delay:
+            relative: 5
+    next_state:
+        component: meya.text
+        properties:
+            text: Ok, meanwhile I will check for availability and i will connect you to one of my colleagues.
+        delay:
+            relative: 5

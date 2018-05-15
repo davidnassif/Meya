@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: إلغاء
+        capture_text: true
+name: el8a2
+states:
+    first:
+        component: meya.text
+        properties:
+            text: لا تسري رسوم الإلغاء إلا إذا قمت بإلغاء الجلسة قبل أقل من 24 ساعة من جلسة التنظيف. ستكون الرسوم 100٪ من إجمالي جلسة التنظيف. خلاف ذلك ، لن يتم تكبد أي رسوم إلغاء.

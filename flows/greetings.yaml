@@ -1,0 +1,14 @@
+# this flow routes the built-in greeting intent to different states
+# based on what the user has said "hi", "how are you?", "help", etc.
+triggers:
+  - type: meya.greetings
+name: greetings
+intents:
+    hi: hi
+states:
+    hi:
+        component: meya.random_text
+        properties:
+            responses:
+                - "Hi,Welcome to Matic! Allow me to help you book a cleaning visit for your home in seconds! Would you like me to make a booking right now?"
+        return: true

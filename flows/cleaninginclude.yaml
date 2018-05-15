@@ -1,0 +1,14 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: include
+        capture_text: true
+name: cleaninginclude
+states:
+    first:
+        component: meya.text
+        properties:
+            text: Our cleaning services include dusting, wiping, vacuum cleaning rooms and bathrooms. You can add specific requests based on your home's needs!
+        delay:
+            relative: 5

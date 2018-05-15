@@ -1,0 +1,31 @@
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: testf
+name: Test
+image_buttons_state:
+        component: meya.image_buttons
+        properties:
+            image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg"
+            output: button_click
+            buttons:
+                - text: London
+                  action: city_set_state
+                  data:
+                    city: London
+                - text: Singapore
+                  action: city_set_state
+                  data:
+                    city: Singapore
+                - text: Other
+                  data:
+                    city: UNAVAILABLE
+                  action: other_flow_no_service_yet
+other_flow_no_service_yet:
+        component: matic.custom_no_option_flow
+        return: true
+city_set_state:
+        component: meya.text
+        properties:
+            text: You chose {{ flow.button_click }} button.  You city is {{ flow.button_click}}

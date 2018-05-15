@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: أريد أن اشتكي
+        capture_text: true
+name: ouridouAnAchtaki
+states:
+    first:
+        component: meya.text
+        properties:
+            text: أعتذر مجدداً على الإزعاج الذي قد حصل. نحن نعمل على حل المسألة ووضعناها على قائمة أولوياتنا! أرجو إعطائي بضع دقائق للتحقق من حالة الشكوى.

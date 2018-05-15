@@ -1,0 +1,17 @@
+# select a blueprint above or type/paste YAML here
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: صباح الخير
+        capture_text: true
+name: SabahEl5ayr
+states:
+    first:
+        component: meya.random_text
+        properties:
+            responses:
+             - "مرحبًا بك في ماتيك! اسمح لي بمساعدتك في حجز زيارة تنظيف لمنزلك في ثوانٍ! هل تريد مني أن أجري حجزًا الآن؟"
+             - "Hello, there!"
+             - "Howdy!"
+             - "Bonjour."
