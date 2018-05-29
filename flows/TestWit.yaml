@@ -147,6 +147,20 @@ states:
         delay:
             relative: 5
         return: true
+    PreferredSP:
+        component: meya.text
+        properties:
+            text: It's great that you were able to find the cleaner that matches the needs of your house, help us know what made her be your preferred cleaner. In the mean time, one of our specialists will check her availability and gets back to you.
+        delay:
+            relative: 5
+        return: true
+    Refund:
+        component: meya.text
+        properties:
+            text: Thank you for raising this, we will escalate this to the specialized department and they will check the refund case and contact you back. Thank you for your patience.
+        delay:
+            relative: 5
+        return: true
     ambiguous_state:
         component: meya.text
         properties:
