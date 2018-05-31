@@ -9,7 +9,10 @@ states:
     booking:
         component: meya.text
         properties:
-            text: booking test
+            text: I will need a few details to complete this booking.May I have your complete name, address, mobile number and email address, please?
+            action: next
+        delay:
+            relative: 5
         return: true
     Garbage:
         component: meya.text
@@ -158,6 +161,62 @@ states:
         component: meya.text
         properties:
             text: Thank you for raising this, we will escalate this to the specialized department and they will check the refund case and contact you back. Thank you for your patience.
+        delay:
+            relative: 5
+        return: true
+    CleaningTools:
+        component: meya.text
+        properties:
+            text: We currently bring with us the needed cleaning tools only in Dubai for extra charge
+        delay:
+            relative: 5
+        return: true
+    BadService:
+        component: meya.text
+        properties:
+            text: Thank you for informing us and we understand your frustration. we are very concerned to know more about this incident so that we take the needed action. One of our specialists will be with you in few moments
+        delay:
+            relative: 5
+        return: true
+    NoShow:
+        component: meya.text
+        properties:
+            text: Thank you for informing us and we understand your frustration. we are very concerned to know more about this incident so that we take the needed action. One of our specialists will be with you in few moments
+        delay:
+            relative: 5
+        return: true
+    Theft:
+        component: meya.text
+        properties:
+            text: Thank you for informing us and we understand your frustration. we are very concerned to know more about this incident so that we take the needed action. One of our specialists will be with you in few moments
+        delay:
+            relative: 5
+        return: true
+    CleanerSlow:
+        component: meya.text
+        properties:
+            text: Thank you for informing us and we understand your frustration. we are very concerned to know more about this incident so that we take the needed action. One of our specialists will be with you in few moments
+        delay:
+            relative: 5
+        return: true
+    ExtendVisit:
+        component: meya.text
+        properties:
+            text: We will check the possibility of extending the visit however it's very unlikely that we find that available. Do you think next time you will need two cleaners to do the job?
+        delay:
+            relative: 5
+        return: true
+    Travel:
+        component: meya.text
+        properties:
+            text: Thank you for informing us and we wish you a safe trip. One of our specialist will be checking the possibility to reschedule your visit.
+        delay:
+            relative: 5
+        return: true
+    CleanerLate:
+        component: meya.text
+        properties:
+            text: Thank you for contacting us and we appriciate your time, as you know it's nearly impossible to deliver 10 cleaners at the same time and this is why we have an open window where your service might start a bit earlier or later. Thank you for your understanding
         delay:
             relative: 5
         return: true
