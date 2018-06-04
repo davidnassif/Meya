@@ -13,6 +13,12 @@ states:
             action: next
         delay:
             relative: 5
+    booking1:
+        component: meya.text
+        properties:
+            text: If you have a different address, please make sure to add it and select the one you you wish to have the cleaning session in.
+        delay:
+            relative: 15
         return: true
     Garbage:
         component: meya.text
@@ -217,6 +223,20 @@ states:
         component: meya.text
         properties:
             text: Thank you for contacting us and we appriciate your time, as you know it's nearly impossible to deliver 10 cleaners at the same time and this is why we have an open window where your service might start a bit earlier or later. Thank you for your understanding
+        delay:
+            relative: 5
+        return: true
+    Reschedule:
+        component: meya.text
+        properties:
+            text: Rescheduling within the last 24 hours will result in 100% visit fees. If it's not urgent, we prefer that this visit goes through as agreed. If there's still more than 24 hours then please specify the date and time that you wish to have the cleaning session on.
+        delay:
+            relative: 5
+        return: true
+    RiyadhPhoneNumber:
+        component: meya.text
+        properties:
+            text: Our number in Riyadh is 0112761638
         delay:
             relative: 5
         return: true
