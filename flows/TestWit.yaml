@@ -28,7 +28,17 @@ states:
     WhatIsMatic:
         component: meya.text
         properties:
-            text: Matic is a platform for home services that connects you with cleaning professionals in a few clicks.
+            text: Matic is a digital platform for booking home cleanining service on hourly basis
+        return: true
+    WhatIsMaticAR:
+        component: meya.text
+        properties:
+            text: ماتك هي منصة رقمية لحجز خدمة التنظيف المنزلي بنظام الساعة
+        return: true
+    BookingAR:
+        component: meya.text
+        properties:
+            text: شكرا لتواصلك معنا، يرجى تحديد المدينة والحي المتواجد فيه لتأكيد توفر الخدمة في منطقتك
         return: true
     CoveredArea:
         component: meya.text
@@ -38,7 +48,12 @@ states:
     Transportation:
         component: meya.text
         properties:
-            text: Thanks for your concern, Matic wants to make the cleaning process easy for you therefor we take full care of the transportation.
+            text: Thanks for asking, yes the transportation is included in the full price.
+        return: true
+    TransportationAR:
+        component: meya.text
+        properties:
+            text: رسوم التوصيل شاملة مع السعر الإجمالي للخدمة
         return: true
     AppUse:
         component: meya.text
@@ -49,6 +64,11 @@ states:
         component: meya.text
         properties:
             text: Can I know what's the exact error? I will also need your mobile number to check your details. In the meantime, can you please check if the app needs to be updated?
+        return: true
+    AppErrorAR:
+        component: meya.text
+        properties:
+            text: لخدمتك بشكل أفضل، أرجوا منك ان تزودني بتفاصيل الخلل بالضبط بالإضافة رقم الجوال. وفي الوقت الحالي يرجى التأكد ان التطبيق يعمل على اخر نسخة تحديث.
         return: true
     Payment:
         component: meya.text
@@ -70,6 +90,11 @@ states:
         properties:
             text: We curretnly don't provide Babysitter services
         return: true
+    BabySitterAR:
+        component: meya.text
+        properties:
+            text: لا يوجد لدينا خدمة المربية المنزلية
+        return: true
     ServicesInclude:
         component: meya.text
         properties:
@@ -86,10 +111,24 @@ states:
         delay:
             relative: 5
         return: true
+    ServicesIncludeAR:
+        component: meya.text
+        properties:
+            text: الخدمة تشمل تنظيف الغبار و غسيل ومسح الأرضيات والأسطح للغرف والمطابخ ودورات المياه. بالإمكان اضافة طلبات خاصة لتناسب احتياجات منزلك
+        delay:
+            relative: 5
+        return: true
     CancellationFees:
         component: meya.text
         properties:
-            text: Cancellation charges only apply if you cancel your session less than 24 hours before your cleaning session. Fees will be 100% of your total cleaning session. Otherwise, no cancellation fees will be incurred.
+            text: Cancellation charges only apply if you cancel your session less than 24 hours before your cleaning session. Fees will be 100% of your total cleaning session. 
+        delay:
+            relative: 5
+        return: true
+    CancellationFeesAR:
+        component: meya.text
+        properties:
+            text: رسوم الإلغاء تطبق اذا تم الغاء الزيارة في اقل من ٢٤ ساعة من موعد الزيارة. رسوم الإلغاء هي مبلغ الزيارة بالكامل.
         delay:
             relative: 5
         return: true
@@ -99,11 +138,24 @@ states:
             text: We curretnly don’t provide Ironing Services
         delay:
             relative: 5
+    IroningServicesAR:
+        component: meya.text
+        properties:
+            text: We curretnly don’t provide Ironing Services
+        delay:
+            relative: 5
         return: true
     LegalService:
         component: meya.text
         properties:
-            text: All the service providers working with us are legal employees authorized to perform part time home cleaning.
+            text: All the service providers working with us are legal entities authorized to perform part time home cleaning.
+        delay:
+            relative: 5
+        return: true
+    LegalServiceAR:
+        component: meya.text
+        properties:
+            text:جميع شركائنا موردين القوى العاملة مرخصين قانونيا للعمل بمجال التنظيف المنزلي بنظام الساعة
         delay:
             relative: 5
         return: true
@@ -117,14 +169,28 @@ states:
     Location:
         component: meya.text
         properties:
-            text: "our main location is in Dubai but our offices in KSA are located in Dammam Al Waha - Bader offices https://maps.google.com/?q=24.747698,46.619045"
+            text: "our main location is in Dubai but our offices in KSA are located in Dammam Al Waha - Badir offices "
+        delay:
+            relative: 5
+        return: true
+    LocationAR:
+        component: meya.text
+        properties:
+            text: "مقرنا الرئيسي متواجد في دبي، ويوجد لدينا مكتب في الدمام في بادر لحاضنات التقنية"
         delay:
             relative: 5
         return: true
     FemaleCleaners:
         component: meya.text
         properties:
-            text: Our cleaners are professional females
+            text: The staff are professional females
+        delay:
+            relative: 5
+        return: true
+    FemaleCleanersAR:
+        component: meya.text
+        properties:
+            text: جميع العاملات هم اناث
         delay:
             relative: 5
         return: true
@@ -138,14 +204,27 @@ states:
     PestControl:
         component: meya.text
         properties:
-            text: We currently don't have pest control services, Our cleaning services include dusting, wiping, vacuum cleaning rooms and bathrooms.
+            text: We currently don't have pest control services, we only offer home cleaning services
+        delay:
+            relative: 5
+        return: true
+    PestControlAR:
+        component: meya.text
+        properties:
+            text:لا يوجد لدينا خدمة مكافحة الحشرات، حاليا نوفر خدمة التنظيف المنزلي فقط
         delay:
             relative: 5
         return: true
     PermanentCleaner:
         component: meya.text
         properties:
-            text: We are sorry but our cleaners perform part time cleaning jobs and can’t stay over your house, however you can pick the cleaner that you preffer and have her visit you daily for 6 hours.
+            text: We are sorry but the cleaners work on hourly basis and can’t stay over your house, however you can pick the cleaner that you preffer and have her visit you on daily basis.
+        delay:
+            relative: 5
+    PermanentCleanerAR:
+        component: meya.text
+        properties:
+            text: للأسف العمالة المتوفرة في تطبيق ماتك تعمل بنظام الساعة فقط. لكن بالإمكان حجز زياراة تنظيف يومية عند عثورك على العاملة المناسبة.
         delay:
             relative: 5
         return: true
@@ -174,6 +253,13 @@ states:
         component: meya.text
         properties:
             text: We currently bring with us the needed cleaning tools only in Dubai for extra charge
+        delay:
+            relative: 5
+        return: true
+    CleaningToolsAR:
+        component: meya.text
+        properties:
+            text: حاليا نوفر ادوات التظيف في دبي فقط بمقابل مبلغ اضافي 
         delay:
             relative: 5
         return: true
@@ -240,6 +326,13 @@ states:
         delay:
             relative: 5
         return: true
+    BachelorAR:
+        component: meya.text
+        properties:
+            text: للأسف الخدمة مخصصة فقط للعوائل. شكرا لتفهمك
+        delay:
+            relative: 5
+        return: true    
     ambiguous_state:
         component: meya.text
         properties:
