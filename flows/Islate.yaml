@@ -3,26 +3,25 @@ states:
     text_buttons_state:
         component: meya.text_buttons
         properties:
-            text: "نأسف بشدة لإحباطك ونشكرك على الإبلاغ عنه. الرجاء مساعدتي في فهم مشكلتك بشكل أفضل
-"
+            text: We are extremely  sorry for your frustration and thank you for reporting it. Please help me better understand your concern.
             output: button_click
             buttons:
-                - text: تأخرت العاملة
+                - text: Cleaner is late
                   action: next
                   flow: CleanerIsLate
                   data:
                     foo: bar
-                - text: جودة سيئة
+                - text: Bad quality
                   action: next
                   flow: BadQuality
-                - text: فظاظة
+                - text: Rudeness
                   action: next
                   flow: Rudeness
-                - text: صعوبات التطبيق
+                - text: Application difficulties
                   action: next
                   flow: ApplicationDifficulties
-                - text: لا توافر
+                - text: No Availability
                   action: next
                   flow: NoAvailability
         delay:
-            relative: 10
+            relative: 5

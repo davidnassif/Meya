@@ -1,8 +1,0 @@
-name: BadQualityEN
-states:
-    text_buttons_state:
-        component: meya.text
-        properties:
-            text: We completely understand your frustration, can you please describe the matters in few words to transfer your concern  to the specialized department.
-        delay:
-            relative: 5

@@ -3,6 +3,6 @@ states:
     text_buttons_state:
         component: meya.text
         properties:
-            text: نحن نتفهم تمامًا إحباطك ، هل يمكنك وصف الأمور في بضع كلمات لنقل اهتمامك إلى الإدارة المتخصصة
+            text: We completely understand your frustration, can you please describe the matters in few words to transfer your concern  to the specialized department.
         delay:
-            relative: 10
+            relative: 5

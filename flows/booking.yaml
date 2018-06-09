@@ -3,16 +3,16 @@ states:
     text_buttons_state:
         component: meya.text_buttons
         properties:
-            text: هل أنت مهتم في حجز
+            text: Are you interested in booking a
             output: button_click
             buttons:
-                - text: زيارة واحدة
+                - text: Single Visit
                   action: next
-                  flow: SingleVisitEN
+                  flow: SingleVisit
                   data:
                     foo: bar
-                - text: باقة
+                - text: Package
                   action: next
-                  flow: PackageEN
+                  flow: Package
         delay:
             relative: 5

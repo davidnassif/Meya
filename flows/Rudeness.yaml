@@ -3,6 +3,6 @@ states:
     text_buttons_state:
         component: meya.text
         properties:
-            text: يؤسفني سماع هذا ، سأعطي أولوية عالية لهذه المسألة ، وسأرفعها على الفور إلى إدارتنا وستتلقى بالتأكيد مكالمة من أحد الاختصاصيين 
+            text: I'm so sorry to hear this, I will be giving high priority to this matter, I will raise it immediately to our management and you will definitely get a call back from one of our specialists. 
         delay:
-            relative: 100
+            relative: 5

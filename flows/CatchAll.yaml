@@ -1,61 +1,10 @@
 triggers:
   - type: meya.catchall
+    properties:
+        detect_language: false
+        include_non_text_events: false
 name: CatchAll
 states:
-    First:
-        component: meya.text_buttons
-        properties:
-            text: أنا آسف لم  أفهم ما تقصده بالضبط ، أرجو منك مساعدتي في فهم ما قصدته بشكل أفضل هل تفضل اللغة العربية أم الإنكليزية؟
-            output: button_click
-            buttons:
-                - text: اللغة الإنكليزية(English)
-                  action: text_buttons_state
-                  data:
-                    foo: bar
-                - text: اللغة العربية(Arabic)
-                  action: text_buttons_stateAR
-        transitions:
-            text_buttons_stateAR: text_buttons_stateAR
-            text_buttons_state: text_buttons_state
-    Second:
-        component: meya.text_buttons
-        properties:
-            text: I'm sorry I did not understand exactly what you mean, please help me understand what you meant better. Do you prefer Arabic or English?
-            output: button_click
-            buttons:
-                - text: اللغة الإنكليزية(English)
-                  action: next
-                  flow: Booking 
-                  data:
-                    foo: bar
-                - text: اللغة العربية(Arabic)
-                  action: next
-                  flow: BookingAR
-    text_buttons_stateAR:
-        component: meya.text_buttons
-        properties:
-            text: هل يتعلق الأمر بما يلي
-            output: button_click
-            buttons:
-                - text: حجز
-                  action: next
-                  flow: Booking 
-                  data:
-                    foo: bar
-                - text: إعادة جدولة
-                  action: next
-                  flow: Rescheduling
-                - text: دفع
-                  action: next
-                  flow: Payment
-                - text: إلغاء
-                  action: next
-                  flow: ToCancel
-                - text: تقديم شكوى
-                  action: next
-                  flow: IsLate
-        delay:
-            relative: 10
     text_buttons_state:
         component: meya.text_buttons
         properties:
@@ -64,20 +13,23 @@ states:
             buttons:
                 - text: Booking
                   action: next
-                  flow: BookingEN
+                  flow: Booking 
                   data:
                     foo: bar
                 - text: Rescheduling
                   action: next
-                  flow: ReschedulingEN
+                  flow: Booking
+                - text: Information
+                  action: next
+                  flow: ToCancel
                 - text: Payment
                   action: next
-                  flow: PaymentEN
+                  flow: ToCancel
                 - text: Cancellation
                   action: next
-                  flow: ToCancelEN
+                  flow: ToCancel
                 - text: Making a complaint
                   action: next
-                  flow: IsLateEN
+                  flow: IsLate
         delay:
             relative: 5

@@ -3,46 +3,46 @@ states:
     First:
         component: meya.text_buttons
         properties:
-            text: يرجى اختيار الجنسية التي ترغب في الحصول عليها ، وسوف نتحقق من توافرها حسب منطقتك
+            text: Please choose the nationality you wish to have, we will check the availability according to your area
             output: button_click
             buttons:
-                - text: الفلبينية
+                - text: Filipino
                   action: next
                   data:
                     foo: bar
-                - text: الأندونيسية
+                - text: Indonesian
                   action: next
-                - text: النيجيري
+                - text: Nigerian
                   action: next
-                - text: أوغندا
+                - text: Ugandan
                   action: next
-                - text: بنغلاديشي
+                - text: Bangladesh
                   action: next
-                - text: أثيوبي
+                - text: Ethiopian
                   action: next
-                - text: قيرغيزستاني
+                - text: Kyrgyzstan
                   action: next
         delay:
             relative: 5
     Second:
         component: meya.text_buttons
         properties:
-            text: كم مرة تريد منا تنظيف منزلك في الأسبوع؟
+            text: How many times would you like us to clean your house per week?
             output: button_click
             buttons:
-                - text: مرة في الأسبوع
+                - text: Once a week
                   action: next
                   data:
                     foo: bar
-                - text: مرتين في الأسبوع
+                - text: Twice a week
                   action: next
-                - text: ثلاث مرات في الاسبوع
+                - text: Three times a week
                   action: next
         delay:
             relative: 5
     Third:
         component: meya.text
         properties:
-            text: حسناً ، في هذه الأثناء ، سوف أتحقق من توفر عاملة حسب طلبك، سيتواصل مع حضرتك أحد المختصين 
+            text: Ok, meanwhile I will check for availability and i will connect you to one of my colleagues.
         delay:
             relative: 5
