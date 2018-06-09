@@ -1,0 +1,100 @@
+name: Rescheduling
+states:
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: شكرا على اتصالك بنا ، هل الزيارة التي تحتاج إلى لإعادة جدولتها أقل من 24 ساعة؟
+            output: button_click
+            buttons:
+                - text: نعم
+                  action: Yes
+                  data:
+                    foo: bar
+                - text: لا
+                  action: No
+        transitions:
+            Yes: LessThan24Hours
+            No: NoLessThanAnHour
+        delay:
+            relative: 5
+    LessThan24Hours:
+        component: meya.text
+        properties:
+            text: لا يتم تطبيق رسوم الإلغاء أو إعادة الجدولة إلا إذا قمت بإلغاء جلسة العمل الخاصة بك قبل أقل من 24 ساعة جلسة التنظيف. ستكون الرسوم 100٪ من إجمالي جلسة التنظيف. خلاف ذلك ، سيتم فرض أي رسوم الإلغاء
+        action: next
+        delay:
+            relative: 5
+        transitions:
+            next: AfterCancelationInfo
+    AfterCancelationInfo:
+        component: meya.text_buttons
+        properties:
+            text: هل تريد مني المتابعة؟ 
+            output: button_click
+            buttons:
+                - text: نعم
+                  action: YesProcceed
+                  data:
+                    foo: bar
+                - text: لا
+                  action: NoProcceed
+                - text: التحدث مع وكيل
+                  action: TalkToAnAgent
+        transitions:
+            YesProcceed: NoLessThanAnHour
+            NoProcceed: NoProcceed
+            TalkToAnAgent: TalkToAnAgent
+        delay:
+            relative: 5
+    YesProcceed:
+        component: meya.text
+        properties:
+            text: سيتم إلغاء الحجز الخاص بك بعد قليل وسوف تتلقى تأكيدًا.
+            flow: booking
+        delay:
+            relative: 5
+        return: true
+    NoProcceed:
+        component: meya.text_buttons
+        properties:
+            text: "هذا رائع ، لا تتردد في إخبارنا إذا كنت بحاجة إلى المزيد من المساعدة ، فنحن هنا لخدمتك \U0001F604" 
+        delay:
+            relative: 5
+    YesModifyVisit:
+        component: meya.text
+        properties:
+            text: حسناً ، في هذه الأثناء ، سوف أتحقق من توفر عاملة حسب طلبك، سيتواصل مع حضرتك أحد المختصين 
+        delay:
+            relative: 5
+    NoModifyVisit:
+        component: meya.text
+        properties:
+            text: "هذا رائع ، لا تتردد في إخبارنا إذا كنت بحاجة إلى المزيد من المساعدة ، فنحن هنا لخدمتك \U0001F604" 
+        delay:
+            relative: 5
+        return: true
+    TalkToAnAgent:
+        component: meya.text
+        properties:
+            text: حسنًا يا عزيزي ، عادةً ما يرد المتخصص في بضع دقائق
+            action: cancel
+        delay:
+            relative: 5
+        transitions:
+            cancel: NoLessThanAnHour
+    NoLessThanAnHour:
+        component: meya.text_buttons
+        properties:
+            text: هل أنت مهتم في حجز
+            output: button_click
+            buttons:
+                - text: زيارة واحدة
+                  action: next
+                  flow: SingleVisit
+                  data:
+                    foo: bar
+                - text: صفقة
+                  action: next
+                  flow: Package
+        delay:
+            relative: 5

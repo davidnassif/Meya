@@ -1,0 +1,8 @@
+name: Rudeness
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: يؤسفني سماع هذا ، سأعطي أولوية عالية لهذه المسألة ، وسأرفعها على الفور إلى إدارتنا وستتلقى بالتأكيد مكالمة من أحد الاختصاصيين 
+        delay:
+            relative: 100

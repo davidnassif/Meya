@@ -1,0 +1,8 @@
+name: ApplicationDifficultiesEN
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: We are very happy to know your feedback, please type us in few words what is your difficulty and what would you like to know to increase the level of your satisfaction.
+        delay:
+            relative: 5

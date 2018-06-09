@@ -1,0 +1,100 @@
+name: ReschedulingEN
+states:
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: Thank you for contacting us, is the visit you need to reschedule less than 24 hours?
+            output: button_click
+            buttons:
+                - text: Yes
+                  action: Yes
+                  data:
+                    foo: bar
+                - text: No
+                  action: No
+        transitions:
+            Yes: LessThan24Hours
+            No: NoLessThanAnHour
+        delay:
+            relative: 5
+    LessThan24Hours:
+        component: meya.text
+        properties:
+            text: Cancelation or Rescheduling charges only apply if you cancel your session less than 24 hours before your cleaning session. Fees will be 100% of your total cleaning session. Otherwise, no cancelation or reschedule fees will be incurred.
+        action: next
+        delay:
+            relative: 5
+        transitions:
+            next: AfterCancelationInfo
+    AfterCancelationInfo:
+        component: meya.text_buttons
+        properties:
+            text: Would you like me to proceed? متابعة؟ 
+            output: button_click
+            buttons:
+                - text: Yes
+                  action: YesProcceed
+                  data:
+                    foo: bar
+                - text: No
+                  action: NoProcceed
+                - text: Talk to an agent
+                  action: TalkToAnAgent
+        transitions:
+            YesProcceed: NoLessThanAnHour
+            NoProcceed: NoProcceed
+            TalkToAnAgent: TalkToAnAgent
+        delay:
+            relative: 5
+    YesProcceed:
+        component: meya.text
+        properties:
+            text: Your booking will be cancelled shortly and you will receive a confirmation.
+            flow: booking
+        delay:
+            relative: 5
+        return: true
+    NoProcceed:
+        component: meya.text_buttons
+        properties:
+            text: "That's great, please don't hesitate to let us know if tou need more help, we are here to serve you. \U0001F604" 
+        delay:
+            relative: 5
+    YesModifyVisit:
+        component: meya.text
+        properties:
+            text: Well, in the meantime, I'll check the availability of an agent and he will get back to you
+        delay:
+            relative: 5
+    NoModifyVisit:
+        component: meya.text
+        properties:
+            text: "That's great, please don't hesitate to let us know if tou need more help, we are here to serve you. \U0001F604" 
+        delay:
+            relative: 5
+        return: true
+    TalkToAnAgent:
+        component: meya.text
+        properties:
+            text: Okay dear, our specialist typically replies in few minutes.
+            action: cancel
+        delay:
+            relative: 5
+        transitions:
+            cancel: NoLessThanAnHour
+    NoLessThanAnHour:
+        component: meya.text_buttons
+        properties:
+            text: Are you interested in booking a
+            output: button_click
+            buttons:
+                - text: Single Visit
+                  action: next
+                  flow: SingleVisit
+                  data:
+                    foo: bar
+                - text: Package
+                  action: next
+                  flow: Package
+        delay:
+            relative: 5

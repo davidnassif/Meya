@@ -1,0 +1,48 @@
+name: Package
+states:
+    First:
+        component: meya.text_buttons
+        properties:
+            text: يرجى اختيار الجنسية التي ترغب في الحصول عليها ، وسوف نتحقق من توافرها حسب منطقتك
+            output: button_click
+            buttons:
+                - text: الفلبينية
+                  action: next
+                  data:
+                    foo: bar
+                - text: الأندونيسية
+                  action: next
+                - text: النيجيري
+                  action: next
+                - text: أوغندا
+                  action: next
+                - text: بنغلاديشي
+                  action: next
+                - text: أثيوبي
+                  action: next
+                - text: قيرغيزستاني
+                  action: next
+        delay:
+            relative: 5
+    Second:
+        component: meya.text_buttons
+        properties:
+            text: كم مرة تريد منا تنظيف منزلك في الأسبوع؟
+            output: button_click
+            buttons:
+                - text: مرة في الأسبوع
+                  action: next
+                  data:
+                    foo: bar
+                - text: مرتين في الأسبوع
+                  action: next
+                - text: ثلاث مرات في الاسبوع
+                  action: next
+        delay:
+            relative: 5
+    Third:
+        component: meya.text
+        properties:
+            text: حسناً ، في هذه الأثناء ، سوف أتحقق من توفر عاملة حسب طلبك، سيتواصل مع حضرتك أحد المختصين 
+        delay:
+            relative: 5

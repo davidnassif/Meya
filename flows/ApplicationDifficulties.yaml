@@ -1,0 +1,8 @@
+name: ApplicationDifficulties
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: نحن سعداء للغاية لمعرفة ملاحظاتك ، يرجى الكتابة لنا في بضع كلمات ما هي الصعوبة الخاصة بك وماذا تريد أن تعرف لزيادة مستوى رضائك
+        delay:
+            relative: 10

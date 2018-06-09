@@ -1,0 +1,65 @@
+name: CleanerIsLate
+states:
+    First:
+        component: meya.text
+        properties:
+            text: نشكرك على صبرك ، ونحن نتفهم قلقك ، فقط لإبلاغك بأن لدينا ساعة مفتوحة ، على سبيل المثال إذا كانت الزيارة في تمام الساعة الرابعة مساءً ، فقد تتلقى المنظف بدءًا من الساعة الثالثة حتى الخامسة مساءً.
+        delay:
+            relative: 10
+    Second:
+        component: meya.text_buttons
+        properties:
+            text: هل المنظف متأخر أكثر من ساعة؟ 
+            output: button_click
+            buttons:
+                - text: نعم 
+                  action: Yes
+                  data:
+                    foo: bar
+                - text: لا
+                  action: No
+        transitions:
+            Yes: YesMoreThanAnHour
+            No: NoMoreThanAnHour
+        delay:
+            relative: 10
+    YesMoreThanAnHour:
+        component: meya.text
+        properties:
+            text: حسنًا ، من فضلك أعطني بضع دقائق وسنعاود الاتصال بك
+        delay:
+            relative: 10
+        return: true
+    NoMoreThanAnHour:
+        component: meya.text
+        properties:
+            text: نشكرك على الرد السريع ، وسأتابع معك بعض قليل
+            action: next
+        delay:
+            relative: 10
+        transitions:
+            next: After15Mins
+    After15Mins:
+        component: meya.text_buttons
+        properties:
+            text: أود فقط أن أتأكد ، هل تلقيت المنظف أم لا؟
+            output: button_click
+            buttons:
+                - text: نعم
+                  action: YesReceived
+                  data:
+                    foo: bar
+                - text: لا
+                  action: NoReceived
+        transitions:
+            YesReceived: YesReceived
+            NoReceived: Second
+        delay:
+            relative: 10
+    YesReceived:
+        component: meya.text
+        properties:
+            text: "هذا رائع ، لا تتردد في إخبارنا إذا كنت بحاجة إلى المزيد من المساعدة ، فنحن هنا لخدمتك \U0001F604"
+        delay:
+            relative: 10
+        return: true

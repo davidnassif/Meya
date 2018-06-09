@@ -1,0 +1,132 @@
+triggers:
+  - type: meya.wit
+    properties:
+        min_confidence: '0.6'
+        token: SPHMMHA2JVMAQGGZUJACYCBYVEA5NQPL
+name: TestWit
+route: true
+states:
+    Garbage:
+        component: meya.text
+        properties:
+            text: Garbage
+        delay:
+            relative: 10
+        return: true
+    WhatIsMaticAR:
+        component: meya.text
+        properties:
+            text: ماتك هي منصة رقمية لحجز خدمة التنظيف المنزلي بنظام الساعة
+        delay:
+            relative: 10
+        return: true
+    BookingAR:
+        component: meya.text
+        properties:
+            text: شكرا لتواصلك معنا، يرجى تحديد المدينة والحي المتواجد فيه لتأكيد توفر الخدمة في منطقتك
+        delay:
+            relative: 10
+        return: true
+    TransportationAR:
+        component: meya.text
+        properties:
+            text: رسوم التوصيل شاملة مع السعر الإجمالي للخدمة
+        delay:
+            relative: 10
+        return: true
+    AppErrorAR:
+        component: meya.text
+        properties:
+            text: لخدمتك بشكل أفضل، أرجوا منك ان تزودني بتفاصيل الخلل بالضبط بالإضافة رقم الجوال. وفي الوقت الحالي يرجى التأكد ان التطبيق يعمل على اخر نسخة تحديث.
+        delay:
+            relative: 10
+        return: true
+    BabySitterAR:
+        component: meya.text
+        properties:
+            text: لا يوجد لدينا خدمة المربية المنزلية
+        delay:
+            relative: 10
+        return: true
+    ServicesIncludeAR:
+        component: meya.text
+        properties:
+            text: الخدمة تشمل تنظيف الغبار و غسيل ومسح الأرضيات والأسطح للغرف والمطابخ ودورات المياه. بالإمكان اضافة طلبات خاصة لتناسب احتياجات منزلك
+        delay:
+            relative: 10
+        return: true
+    CancellationFeesAR:
+        component: meya.text
+        properties:
+            text: رسوم الإلغاء تطبق اذا تم الغاء الزيارة في اقل من ٢٤ ساعة من موعد الزيارة. رسوم الإلغاء هي مبلغ الزيارة بالكامل.
+        delay:
+            relative: 10
+        return: true
+    IroningServicesAR:
+        component: meya.text
+        properties:
+            text: حاليا لا نوفر خدمة كوي الملابس
+        delay:
+            relative: 10
+        return: true
+    LegalServiceAR:
+        component: meya.text
+        properties:
+            text:جميع شركائنا موردين القوى العاملة مرخصين قانونيا للعمل بمجال التنظيف المنزلي بنظام الساعة
+        delay:
+            relative: 10
+        return: true
+    LocationAR:
+        component: meya.text
+        properties:
+            text: "مقرنا الرئيسي متواجد في دبي، ويوجد لدينا مكتب في الدمام في بادر لحاضنات التقنية"
+        delay:
+            relative: 10
+        return: true
+    FemaleCleanersAR:
+        component: meya.text
+        properties:
+            text: جميع العاملات هم اناث
+        delay:
+            relative: 10
+        return: true
+    PestControlAR:
+        component: meya.text
+        properties:
+            text:لا يوجد لدينا خدمة مكافحة الحشرات، حاليا نوفر خدمة التنظيف المنزلي فقط
+        delay:
+            relative: 10
+        return: true
+    PermanentCleanerAR:
+        component: meya.text
+        properties:
+            text: للأسف العمالة المتوفرة في تطبيق ماتك تعمل بنظام الساعة فقط. لكن بالإمكان حجز زياراة تنظيف يومية عند عثورك على العاملة المناسبة.
+        delay:
+            relative: 10
+        return: true
+    CleaningToolsAR:
+        component: meya.text
+        properties:
+            text: حاليا نوفر ادوات التظيف في دبي فقط بمقابل مبلغ اضافي 
+        delay:
+            relative: 10
+        return: true
+    BachelorAR:
+        component: meya.text
+        properties:
+            text: للأسف الخدمة مخصصة فقط للعوائل. شكرا لتفهمك
+        delay:
+            relative: 10
+        return: true 
+    GreetingsAR:
+        component: meya.text
+        properties:
+            text: أهلاً بكم
+        delay:
+            relative: 10
+        return: true
+    ambiguous_state:
+        component: meya.text
+        properties:
+            text: ambiguous_state
+        return: true

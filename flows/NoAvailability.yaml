@@ -1,0 +1,14 @@
+name: NoAvailability
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: سيقوم أحد المتخصصين لدينا بالبحث في هذا الأمر وسيقوم بالتحقق لك إذا قام أي شخص بإلغائه ، ثم سنتصل بك لمعرفة ما إذا كان يناسبك أم لا. في غضون ذلك
+
+            action: next
+        delay:
+            relative: 10
+        transitions:
+            next: booking
+    booking:
+        flow: booking

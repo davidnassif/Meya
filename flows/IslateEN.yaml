@@ -1,0 +1,27 @@
+name: IslateEN
+states:
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: We are extremely  sorry for your frustration and thank you for reporting it. Please help me better understand your concern.
+            output: button_click
+            buttons:
+                - text: Cleaner is late
+                  action: next
+                  flow: CleanerIsLateEN
+                  data:
+                    foo: bar
+                - text: Bad quality
+                  action: next
+                  flow: BadQualityEN
+                - text: Rudeness
+                  action: next
+                  flow: RudenessEN
+                - text: Application difficultiesEN
+                  action: next
+                  flow: ApplicationDifficulties
+                - text: No Availability
+                  action: next
+                  flow: NoAvailabilityEN
+        delay:
+            relative: 5

@@ -1,0 +1,36 @@
+name: SingleVisit
+states:
+    next:
+        component: meya.text_buttons
+        properties:
+            text: يرجى اختيار الجنسية التي تريدها 
+            output: button_click
+            buttons:
+                - text: الأندونيسية
+                  action: next
+                  data:
+                    foo: bar
+                - text: الفلبينية
+                  action: next
+        delay:
+            relative: 5
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: "هل تفضل أن تكون جلسة التنظيف"
+            output: button_click
+            buttons:
+                - text: صباحاً
+                  action: next
+                  data:
+                    foo: bar
+                - text: بعد الظهر
+                  action: next
+        delay:
+            relative: 5
+    next_state:
+        component: meya.text
+        properties:
+            text: حسناً ، في هذه الأثناء ، سوف أتحقق من إمكانية الحجز و سأصلك بواحد من زملائي
+        delay:
+            relative: 5

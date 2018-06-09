@@ -1,8 +1,8 @@
-name: PaymentEN
+name: Payment
 states:
     text_buttons_state:
         component: meya.text
         properties:
-            text: You can transfer the amount to this account
+            text: بإمكانك تحويل المبلغ إلى هذا الحساب
         delay:
             relative: 5

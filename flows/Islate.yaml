@@ -1,0 +1,28 @@
+name: Islate
+states:
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: "نأسف بشدة لإحباطك ونشكرك على الإبلاغ عنه. الرجاء مساعدتي في فهم مشكلتك بشكل أفضل
+"
+            output: button_click
+            buttons:
+                - text: تأخرت العاملة
+                  action: next
+                  flow: CleanerIsLate
+                  data:
+                    foo: bar
+                - text: جودة سيئة
+                  action: next
+                  flow: BadQuality
+                - text: فظاظة
+                  action: next
+                  flow: Rudeness
+                - text: صعوبات التطبيق
+                  action: next
+                  flow: ApplicationDifficulties
+                - text: لا توافر
+                  action: next
+                  flow: NoAvailability
+        delay:
+            relative: 10
