@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.wit
+    properties:
+        token: TW5SX6OEFQNRWKLCOQKRJ2XVC73LYQPB
+name: Listen
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: 
+        delay:
+            relative: 5
