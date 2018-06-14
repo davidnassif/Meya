@@ -9,4 +9,9 @@ states:
     First:
         component: meya.text
         properties:
+            text: Are you interested in booking a single visit or a package ?
+        return: true    
+    Handover:
+        component: meya.text
+        properties:
             text: Ok, meanwhile I will connect you to one of my colleagues.

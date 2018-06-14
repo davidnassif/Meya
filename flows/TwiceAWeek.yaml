@@ -1,0 +1,15 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: twice a week
+        capture_text: true
+name: TwiceAWeek
+states:
+    First:
+        component: human.transfer
+        properties:
+            text: Ok, meanwhile I will connect you to one of my colleagues.
+        assignee: "Homer"
+        note: |
+            send msg to homer

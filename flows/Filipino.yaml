@@ -2,11 +2,11 @@ triggers:
   - type: meya.regex
     properties:
         ignorecase: true
-        pattern: حجز
+        pattern: filipino
         capture_text: true
-name: Hajez
+name: Filipino
 states:
     First:
         component: meya.text
         properties:
-            text: "هل أنت مهتم في حجز زيارة واحدة أم باقة ؟"
+            text: Do you prefer the cleaning session to be at morning or afternoon ?

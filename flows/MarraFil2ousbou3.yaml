@@ -1,0 +1,15 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: مرة في الأسبوع
+        capture_text: true
+name: MarraFil2ousbou3
+states:
+    First:
+        component: human.transfer
+        properties:
+            text: " حسناً ، في هذه الأثناء ،  سأصلك بواحد من زملائي"
+        assignee: "Homer"
+        note: |
+            send msg to homer

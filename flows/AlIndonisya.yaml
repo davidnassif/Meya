@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: الأندونيسية
+        capture_text: true
+name: AlIndonisya
+states:
+    First:
+        component: meya.text
+        properties:
+            text: "هل تفضل أن تكون جلسة التنظيف صباحاً أو بعد الظهر ؟"

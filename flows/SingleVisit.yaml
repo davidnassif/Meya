@@ -1,0 +1,16 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: single visit
+        capture_text: true
+    priority: 112
+name: SingleVisit
+states:
+    Sv:
+        component: meya.text
+        properties:
+            text: do you prefer Indonesian or filipino cleaners ?
+        delay:
+            relative: 5
+        return: true

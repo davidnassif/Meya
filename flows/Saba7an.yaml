@@ -1,0 +1,16 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: صباحاً
+        capture_text: true
+    priority: 105
+name: Saba7an
+states:
+    dfd:
+        component: human.transfer
+        properties:
+            text: " حسناً ، في هذه الأثناء ،  سأصلك بواحد من زملائي"
+        assignee: "Homer"
+        note: |
+            send msg to homer

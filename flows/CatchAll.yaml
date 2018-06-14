@@ -1,8 +1,5 @@
 triggers:
   - type: meya.catchall
-    properties:
-        detect_language: false
-        include_non_text_events: false
 name: CatchAll
 states:
     First:

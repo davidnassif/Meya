@@ -1,0 +1,14 @@
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: morning
+name: Morning
+states:
+    First:
+        component: human.transfer
+        properties:
+            text: Ok, meanwhile I will connect you to one of my colleagues.
+        assignee: "Homer"
+        note: |
+            send msg to homer

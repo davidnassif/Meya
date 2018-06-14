@@ -1,0 +1,20 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: باقة
+        capture_text: true
+name: Baka
+states:
+    First:
+        component: meya.text
+        properties:
+            text: "هل تفضل الجنسية الأندونيسية، الفلبينية، النيجيرية، أوغندا، البنجلاديشية، الأثيوبية أو القيرغيزستانية ؟"
+        delay:
+            relative: 5
+    Second:
+        component: meya.text
+        properties:
+            text: كم مرة تريد منا تنظيف منزلك في الأسبوع؟ مرة في الأسبوع، مرتين في الأسبوع أم ثلاث مرات في الاسبوع ؟
+        delay:
+            relative: 5

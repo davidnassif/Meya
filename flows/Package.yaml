@@ -1,0 +1,21 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: package
+        capture_text: true
+name: Package
+states:
+    Sv:
+        component: meya.text
+        properties:
+            text: do you prefer Indonesian, filipino, Nigerian, Ugandan, Bangladesh, Ethiopian or Kyrgyzstan cleaners ?
+        delay:
+            relative: 5
+    Svs:
+        component: meya.text
+        properties:
+            text: How many times would you like us to clean your house per week? once, twice or three times a week ?
+        delay:
+            relative: 5
+        return: true

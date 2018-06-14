@@ -1,0 +1,14 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: زيارة واحدة
+        capture_text: true
+name: ZyaraWa7ida
+states:
+    next:
+        component: meya.text
+        properties:
+            text: "هل تفضل الجنسية الأندونيسية أم الفلبينية ؟"
+        delay:
+            relative: 5
