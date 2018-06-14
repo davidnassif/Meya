@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: Cancellation
+        capture_text: true
+name: Cancellation
+states:
+    First:
+        component: meya.text
+        properties:
+            text: Ok, meanwhile I will connect you to one of my colleagues.

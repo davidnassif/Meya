@@ -1,0 +1,15 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: العربية
+        capture_text: true
+name: Al3arabya
+states:
+    text_buttons_stateAR:
+        component: meya.text
+        properties:
+            text: هل يتعلق الأمر بما يلي حجز، إعادة جدولة، دفع، إلغاء، أو تقديم شكوى ؟
+
+        delay:
+            relative: 10

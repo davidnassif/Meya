@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: تقديم شكوى
+        capture_text: true
+name: TakdimChakwa
+states:
+    First:
+        component: meya.text
+        properties:
+            text: " حسناً ، في هذه الأثناء ،  سأصلك بواحد من زملائي"

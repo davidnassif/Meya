@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: إعادة جدولة
+        capture_text: true
+name: I3adatJadwala
+states:
+    First:
+        component: meya.text
+        properties:
+            text: " حسناً ، في هذه الأثناء ،  سأصلك بواحد من زملائي"

@@ -29,7 +29,7 @@ states:
     whats_up:
         component: meya.text
         properties:
-            text: Not much. What's up with you?
+            text: Good. What's up with you?
         return: true
     help:
         component: meya.text

@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: إلغاء
+        capture_text: true
+name: El8a2
+states:
+    First:
+        component: meya.text
+        properties:
+            text: " حسناً ، في هذه الأثناء ،  سأصلك بواحد من زملائي"

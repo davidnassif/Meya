@@ -1,0 +1,12 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: Booking
+        capture_text: true
+name: Booking
+states:
+    First:
+        component: meya.text
+        properties:
+            text: Ok, meanwhile I will connect you to one of my colleagues.

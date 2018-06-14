@@ -1,0 +1,14 @@
+triggers:
+  - type: meya.regex
+    properties:
+        ignorecase: true
+        pattern: الانكليزية
+        capture_text: true
+name: AlEnglizya
+states:
+    text_buttons_state:
+        component: meya.text
+        properties:
+            text: "I'm sorry I didn't understand what you mean exactly, please help me better understand what you need, does it have to do with:Booking, Rescheduling, Payment, Cancellation or Making a complaint"
+        delay:
+            relative: 5
